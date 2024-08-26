@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question-container">
+            <span id="question"></span>
+        </div>
+        <div id="answer-buttons" class="btn-container">
+            <!-- Answer buttons will be dynamically added here -->
+        </div>
+        <button id="submit-button" class="btn hide" onclick="submitAnswer()">Submit</button>
+        <button id="next-button" class="btn hide" onclick="nextQuestion()">Next</button>
+        <div id="note-container" class="hide">
+            <p id="note">You cannot go back to change your answer once submitted.</p>
+        </div>
+        <div id="score-container" class="hide">
+            <span id="score"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
