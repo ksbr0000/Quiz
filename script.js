@@ -65,15 +65,15 @@ function showQuestion(question) {
 function selectAnswer(answer, button) {
     if (submitButton.classList.contains('hide')) return;
 
-    // Remove previous selection
+    
     const buttons = answerButtons.querySelectorAll('button');
     buttons.forEach(btn => btn.classList.remove('selected'));
 
-    // Highlight selected answer
+   
     button.classList.add('selected');
     selectedAnswer = answer;
 
-    // Show note after selecting an answer
+   
     noteContainer.classList.remove('hide');
 }
 
@@ -87,13 +87,13 @@ function submitAnswer() {
         score++;
     }
 
-    // Disable all answer buttons
+  
     const buttons = answerButtons.querySelectorAll('button');
     buttons.forEach(btn => btn.classList.add('disabled'));
 
     submitButton.classList.add('hide');
     nextButton.classList.remove('hide');
-    noteContainer.classList.add('hide'); // Hide note after submission
+    noteContainer.classList.add('hide');
 }
 
 function nextQuestion() {
@@ -103,7 +103,7 @@ function nextQuestion() {
         showQuestion(questions[currentQuestionIndex]);
         submitButton.classList.remove('hide');
         nextButton.classList.add('hide');
-        noteContainer.classList.add('hide'); // Hide note for next question
+        noteContainer.classList.add('hide');
     } else {
         showScore();
     }
@@ -118,5 +118,5 @@ function showScore() {
     scoreContainer.classList.remove('hide');
 }
 
-// Start the game when the page loads
+
 startGame();
